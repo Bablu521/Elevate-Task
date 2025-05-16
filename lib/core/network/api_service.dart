@@ -6,7 +6,7 @@ class ApiService {
 
   ApiService({required this.dio});
 
-  getData() async {
+  Future<dynamic> getData() async {
     try {
       final String baseUrl = "https://fakestoreapi.com/";
       final String endPoint = "products";
