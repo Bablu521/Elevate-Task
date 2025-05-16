@@ -14,6 +14,7 @@ class ElevateTask extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Elevate-Task",
         onGenerateRoute: appRouter.onGenerateRoute,
         initialRoute: Routes.homeView,

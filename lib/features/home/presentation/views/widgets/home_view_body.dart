@@ -1,3 +1,4 @@
+import 'package:elevate_task/features/home/presentation/views/widgets/product_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -5,6 +6,18 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Center(child: Text("Elevate_task")));
+    return GridView.builder(
+      padding: const EdgeInsets.all(16),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 16,
+        mainAxisSpacing: 16,
+        childAspectRatio: 0.57
+      ),
+      itemBuilder: (context , index) {
+        return ProductItem();
+      },
+      itemCount:20,
+    );
   }
 }
