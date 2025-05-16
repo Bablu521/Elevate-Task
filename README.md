@@ -11,11 +11,11 @@ This is a Flutter implementation using MVVM & Cubit & singleton pattern of a pro
 ## 📱 UI Screenshots
 
 ### Home View / Product Card
-[Home View](assets/screenshots/product_card_1.jpg)
-[Home View](assets/screenshots/product_card_2.jpg)
-[Home View](assets/screenshots/product_card_3.jpg)
-[Home View](assets/screenshots/product_card_4.jpg)
-[Home View](assets/screenshots/product_card_5.jpg)
+[Home View 1](assets/screenshots/product_card_1.jpg)
+[Home View 2](assets/screenshots/product_card_2.jpg)
+[Home View 3](assets/screenshots/product_card_3.jpg)
+[Home View 4](assets/screenshots/product_card_4.jpg)
+[Home View 5](assets/screenshots/product_card_5.jpg)
 
 ### Product Card Favourite Icon
 [Favourite Icon](assets/screenshots/product_card_favourite.jpg)
