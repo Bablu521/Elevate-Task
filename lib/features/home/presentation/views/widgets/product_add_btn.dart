@@ -19,7 +19,7 @@ class ProductAddBtn extends StatelessWidget {
           shape: BoxShape.circle,
           color: AppColors.plusBtnColoe,
         ),
-        child: Icon(Icons.add, color: Colors.white, size: 28),
+        child: const Icon(Icons.add, color: Colors.white, size: 28),
       ),
     );
   }

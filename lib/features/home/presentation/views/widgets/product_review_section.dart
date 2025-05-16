@@ -12,10 +12,10 @@ class ProductReviewSection extends StatelessWidget {
     return Row(
       children: [
         Text("Review", style: AppStyles.style12),
-        SizedBox(width: 3),
+        const SizedBox(width: 3),
         Text("(${product.rating!.rate!})", style: AppStyles.style12),
-        SizedBox(width: 3),
-        Icon(Icons.star, color: AppColors.starColor, size: 18),
+        const SizedBox(width: 3),
+        const Icon(Icons.star, color: AppColors.starColor, size: 18),
       ],
     );
   }

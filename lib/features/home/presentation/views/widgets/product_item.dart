@@ -26,22 +26,23 @@ class ProductItem extends StatelessWidget {
           border: Border.all(width: 2, color: AppColors.borderColor),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(children: [ProductImageSection(product: product,), ProductFavouriteSection(),]),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                   Text(
                     product.title!,
                     style: AppStyles.style14,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     product.description!,
                     style: AppStyles.style12,
@@ -49,14 +50,14 @@ class ProductItem extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     softWrap: true,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   ProductPriceSection(product: product,),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [ProductReviewSection(product: product,), ProductAddBtn()],
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                 ],
               ),
             ),
