@@ -1,16 +1,23 @@
-# elevate_task
+# Elevate-Task UI
 
-A new Flutter project.
+This is a Flutter implementation using MVVM & Cubit & singleton pattern of a product grid view with dynamic card height and custom styling.
 
-## Getting Started
+## ✨ Features
+- Dynamic product card height
+- Product image with favourite icon
+- Title, description, price, discount
+- Review & add to cart button
 
-This project is a starting point for a Flutter application.
+## 📱 UI Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+### Home View / Product Card
+[Home View](assets/screenshots/product_card_1.jpg)
+[Home View](assets/screenshots/product_card_2.jpg)
+[Home View](assets/screenshots/product_card_3.jpg)
+[Home View](assets/screenshots/product_card_4.jpg)
+[Home View](assets/screenshots/product_card_5.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Product Card Favourite Icon
+[Favourite Icon](assets/screenshots/product_card_favourite.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
