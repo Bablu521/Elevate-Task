@@ -7,15 +7,20 @@ class ProductAddBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 35.h,
-      width: 35.h,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: AppColors.plusBtnColoe,
+    return InkWell(
+      onTap: (){
+        // increase product count in cart
+      },
+      child: Container(
+        alignment: Alignment.center,
+        height: 35.h,
+        width: 35.h,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.plusBtnColoe,
+        ),
+        child: Icon(Icons.add, color: Colors.white, size: 28),
       ),
-      child: Icon(Icons.add, color: Colors.white, size: 28),
     );
   }
 }
