@@ -6,7 +6,7 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       // Get screen width
+    // Get screen width
     final screenWidth = MediaQuery.of(context).size.width;
 
     // Total horizontal padding and spacing between items
@@ -33,12 +33,12 @@ class HomeViewBody extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: aspectRatio
+        childAspectRatio: aspectRatio,
       ),
-      itemBuilder: (context , index) {
+      itemBuilder: (context, index) {
         return ProductItem();
       },
-      itemCount:20,
+      itemCount: 20,
     );
   }
 }

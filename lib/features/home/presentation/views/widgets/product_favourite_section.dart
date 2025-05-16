@@ -1,5 +1,6 @@
 import 'package:elevate_task/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProductFavouriteSection extends StatelessWidget {
@@ -12,8 +13,8 @@ class ProductFavouriteSection extends StatelessWidget {
       right: 5,
       child: Container(
         alignment: Alignment.center,
-        height: 35,
-        width: 35,
+        height: 35.h,
+        width: 35.h,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: AppColors.imgBgColor,

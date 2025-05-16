@@ -10,7 +10,7 @@ class ProductPriceSection extends StatelessWidget {
     return Row(
       children: [
         Text("EGP 109.95", style: AppStyles.style14),
-        SizedBox(width: 15),
+        SizedBox(width: 10),
         Text(
           "EGP 109.95",
           style: AppStyles.style12.copyWith(
