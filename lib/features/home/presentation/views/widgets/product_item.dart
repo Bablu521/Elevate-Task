@@ -1,8 +1,12 @@
 import 'package:elevate_task/core/theming/app_colors.dart';
 import 'package:elevate_task/core/theming/app_styles.dart';
+import 'package:elevate_task/features/home/presentation/views/widgets/product_add_btn.dart';
+import 'package:elevate_task/features/home/presentation/views/widgets/product_price_section.dart';
+import 'package:elevate_task/features/home/presentation/views/widgets/product_favourite_section.dart';
+import 'package:elevate_task/features/home/presentation/views/widgets/product_image_section.dart';
+import 'package:elevate_task/features/home/presentation/views/widgets/product_review_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key});
@@ -21,42 +25,8 @@ class ProductItem extends StatelessWidget {
         children: [
           Stack(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(12),
-                  topRight: Radius.circular(12),
-                ),
-                child: Container(
-                  color: Colors.white,
-                  height: 150.h,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: Image.network(
-                      "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: 5,
-                right: 5,
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColors.imgBgColor,
-                  ),
-                  child: Icon(
-                    FontAwesomeIcons.heart,
-                    color: AppColors.heartColor,
-                    size: 20,
-                  ),
-                ),
-              ),
+              ProductImageSection(),
+              ProductFavouriteSection()
             ],
           ),
           SizedBox(height: 16),
@@ -79,42 +49,13 @@ class ProductItem extends StatelessWidget {
                   softWrap: true,
                 ),
                 SizedBox(height: 8),
-                Row(
-                  children: [
-                    Text("EGP 109.95", style: AppStyles.style14),
-                    SizedBox(width: 15),
-                    Text(
-                      "EGP 109.95",
-                      style: AppStyles.style12.copyWith(
-                        color: AppColors.discountColor,
-                        decoration: TextDecoration.lineThrough,
-                      ),
-                    ),
-                  ],
-                ),
+                ProductPriceSection(),
                 SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Text("Review", style: AppStyles.style12),
-                        SizedBox(width: 3),
-                        Text("(4.2)", style: AppStyles.style12),
-                        SizedBox(width: 3),
-                        Icon(Icons.star, color: AppColors.starColor, size: 18),
-                      ],
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 35,
-                      width: 35,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColors.plusBtnColoe,
-                      ),
-                      child: Icon(Icons.add, color: Colors.white, size: 28),
-                    ),
+                    ProductReviewSection(),
+                  ProductAddBtn()
                   ],
                 ),
                 SizedBox(height: 5),
