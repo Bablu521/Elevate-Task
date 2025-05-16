@@ -13,7 +13,7 @@ class HomeRepoImpl implements HomeRepo {
     try {
       var data = await apiService.getData();
       List<ProductModel> products = [];
-      for (var item in data["items"]) {
+      for (var item in data) {
         products.add(ProductModel.fromJson(item));
       }
       return right(products);

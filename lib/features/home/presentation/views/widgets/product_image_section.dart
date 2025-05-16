@@ -1,8 +1,10 @@
+import 'package:elevate_task/features/home/data/model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductImageSection extends StatelessWidget {
-  const ProductImageSection({super.key});
+  final ProductModel product;
+  const ProductImageSection({super.key , required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ProductImageSection extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Image.network(
-            "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            product.image!,
             fit: BoxFit.contain,
           ),
         ),

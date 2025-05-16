@@ -1,5 +1,6 @@
 import 'package:elevate_task/core/theming/app_colors.dart';
 import 'package:elevate_task/core/theming/app_styles.dart';
+import 'package:elevate_task/features/home/data/model/product_model.dart';
 import 'package:elevate_task/features/home/presentation/views/widgets/product_add_btn.dart';
 import 'package:elevate_task/features/home/presentation/views/widgets/product_price_section.dart';
 import 'package:elevate_task/features/home/presentation/views/widgets/product_favourite_section.dart';
@@ -9,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key});
+  final ProductModel product;
+  const ProductItem({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -23,40 +25,33 @@ class ProductItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            children: [
-              ProductImageSection(),
-              ProductFavouriteSection()
-            ],
-          ),
+          Stack(children: [ProductImageSection(product: product,), ProductFavouriteSection(),]),
           SizedBox(height: 16),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                  product.title!,
                   style: AppStyles.style14,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 8),
                 Text(
-                  "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                  product.description!,
                   style: AppStyles.style12,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
                 ),
                 SizedBox(height: 8),
-                ProductPriceSection(),
-                SizedBox(height: 8),
+                ProductPriceSection(product: product,),
+                SizedBox(height: 4),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ProductReviewSection(),
-                  ProductAddBtn()
-                  ],
+                  children: [ProductReviewSection(product: product,), ProductAddBtn()],
                 ),
                 SizedBox(height: 5),
               ],
